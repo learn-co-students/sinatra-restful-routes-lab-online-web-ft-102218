@@ -1,0 +1,23 @@
+<style>
+    a.button {
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        appearance: button;
+
+        text-decoration: none;
+        color: initial;
+        font-size: 14px;
+        padding: 2px;
+    }
+</style>
+
+<h1><%=@recipe.name%></h1>
+<ol style="list-style-type: none;">
+    <li>Name: <%= @recipe.name %></li>
+    <li>Ingredients: <%= @recipe.ingredients %></li>
+    <li>Cooktime: <%= @recipe.cook_time %></li>
+</ol>
+<form method="POST" action="/recipes/<%=@recipe.id%>">
+    <input type="hidden" name="_method" value="delete">
+    <a class="button" href="/recipes/<%=@recipe.id%>/edit">Edit Recipe</a>&nbsp;&nbsp;<input type="submit" value="Delete Recipe">
+</form>
