@@ -177,7 +177,7 @@ describe "Recipe App" do
       )
       visit  "/recipes/#{@cookie.id}"
 
-      click_button "delete"
+      click_button "Delete Recipe"
     end
 
     it "deletes a recipe" do
